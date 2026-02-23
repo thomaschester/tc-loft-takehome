@@ -1,0 +1,36 @@
+name: CI
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    - run: pip install -r requirements.txt pylint
+    - run: pylint --disable=C,R src/
+
+  check-types:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    - run: pip install -r requirements.txt mypy
+    - run: mypy src/
+
+  test:
+    runs-on: ubuntu-latest
+    env:
+      SAT_POSITION_API_KEY: fake_api_key
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    - run: pip install -r requirements.txt pytest
+    - run: pytest

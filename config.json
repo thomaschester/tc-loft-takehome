@@ -1,0 +1,28 @@
+{
+    "interval_seconds": 10,
+    "satellite_category_id": "0",
+    "search_radius_deg": "10",
+    "satellites": {
+        "20344": "#3FA2C8",
+        "22049": "#E74B1A",
+        "23833": "#9D3FE8",
+        "26486": "#2BC46A",
+        "50484": "#F0A500",
+        "53109": "#C23B8E",
+        "20025": "#1DDFB3",
+        "27847": "#FF5733",
+        "26536": "#4B8EF0",
+        "14129": "#A0E040",
+        "10703": "#E84F4F",
+        "9057": "#7B2FBE",
+        "17018": "#00C9A7"
+    },
+    "office_position": {
+        "altitude_meters": "0",
+        "latitude": "37.77169633081985",
+        "longitude": "-122.41352817204972"
+    },
+    "output_mode": 3,
+    "tcp_ip": "127.0.0.1",
+    "tcp_port": "5005"
+}
